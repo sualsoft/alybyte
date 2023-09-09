@@ -1,0 +1,226 @@
+{{define "main"}}
+
+<section
+  class="inner-hero d-flex align-items-center"
+  style="background: url(/assets/img/service-bg.jpg) top center no-repeat"
+>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-9 text-center mt-5">
+        <h2 data-aos="fade-up">About Us</h2>
+        <p data-aos="fade-up" data-aos-delay="400">
+          Welcome to Alybyte Inc., a leading certified diverse IT staffing and
+          recruiting company dedicated to connecting top talent with exceptional
+          opportunities. Our commitment to excellence, diversity, and inclusion
+          drives everything we do.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  {{with .Params.service_details}}
+  <div class="container" data-aos="fade-up">
+    <div class="row gx-0">
+      {{ $items := .items }}
+      <!---->
+
+      {{ range $index, $item := $items }}
+      <!---->
+      {{ if eq (mod $index 2) 0 }}
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center mt-5"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="content">
+          <h2>{{.title}}</h2>
+          <p>{{.content}}</p>
+        </div>
+      </div>
+
+      <div
+        class="col-lg-6 d-flex align-items-center mt-5"
+        data-aos="zoom-out"
+        data-aos-delay="200"
+      >
+        <img src="/assets/img/{{.image}}" class="img-fluid" alt="" />
+      </div>
+      {{ else }}
+      <!---->
+
+      <div
+        class="col-lg-6 d-flex align-items-center mt-5"
+        data-aos="zoom-out"
+        data-aos-delay="200"
+      >
+        <img src="/assets/img/{{.image}}" class="img-fluid" alt="" />
+      </div>
+
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center mt-5"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="content">
+          <h2>{{.title}}</h2>
+          <p>{{.content}}</p>
+        </div>
+      </div>
+
+      {{ end }} {{ end }}
+    </div>
+  </div>
+  {{end}}
+</section>
+<!-- End About Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <header class="section-header mb-5">
+          <p>Meet the Team</p>
+          <br />
+          <h2>
+            Behind every successful endeavor are the people who make it
+            possible. Allow us to introduce you to the passionate minds driving
+            Alybyte Inc. forward:
+          </h2>
+        </header>
+      </div>
+    </div>
+
+    <div class="row gy-4 justify-content-center">
+      <div
+        class="col-lg-3 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img src="/assets/img/team-1.jpg" class="img-fluid" alt="" />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Nikhat Banu Mohammed</h4>
+            <span>Chief Executive Officer</span>
+            <p>
+              The visionary leader who laid the foundation of Alybyte Inc.,
+              Nikhat brings a wealth of experience in IT and a deep-rooted
+              commitment to diversity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Team Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <p>Our Achievements</p>
+      <h2>Our dedication to excellence has earned us several accolades</h2>
+    </header>
+
+    <!-- Feature Icons -->
+    <div class="row feature-icons" data-aos="fade-up">
+      <div class="row">
+        <div
+          class="col-lg-6 text-center"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <img
+            src="/assets/img/about-achive.jpg"
+            class="img-fluid p-4"
+            alt="About us"
+          />
+        </div>
+
+        <div class="col-lg-6 d-flex content">
+          <div class="row align-self-center gy-4">
+            <!--icon box-->
+            <div class="col-md-12 col-lg-12 icon-box" data-aos="fade-up">
+              <i class="bi bi-patch-check-fill"></i>
+              <div>
+                <h4>Certifications</h4>
+                <p>
+                  We are proud to be certified as a diverse business, reflecting
+                  our commitment to fostering inclusion at every level.
+                </p>
+              </div>
+            </div>
+
+            <!--Iocn box-->
+            <div class="col-md-12 col-lg-12 icon-box" data-aos="fade-up">
+              <i class="bi bi-person-check-fill"></i>
+              <div>
+                <h4>Client Satisfaction</h4>
+                <p>
+                  The testimonials of our satisfied clients stand as a testament
+                  to our effectiveness in delivering high-quality solutions.
+                </p>
+              </div>
+            </div>
+
+            <!--Iocn box-->
+            <div class="col-md-12 col-lg-12 icon-box" data-aos="fade-up">
+              <i class="bi bi-people-fill"></i>
+              <div>
+                <h4>Community Engagement</h4>
+                <p>
+                  We actively engage with local communities to promote education
+                  and awareness about IT careers, fostering the next generation
+                  of diverse tech professionals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Feature Icons -->
+  </div>
+</section>
+<!-- End Features Section -->
+
+<section class="cta pb-5">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4 class="mb-4">Join Our Journey</h4>
+          <p>
+            We invite you to join us on our journey of transforming the IT
+            staffing landscape. Whether you're a client seeking exceptional
+            talent or a candidate seeking your next breakthrough, Alybyte Inc.
+            is here to accompany you every step of the way.
+          </p>
+          <p>
+            Together, let's embrace diversity, elevate opportunities, and shape
+            the future of IT.
+          </p>
+          <p><i>Thank you for choosing Alybyte Inc..</i></p>
+          <p>
+            <a href="/contact-us" class="border-btn">Get Start</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---->
+{{end}}

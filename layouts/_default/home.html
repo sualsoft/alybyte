@@ -1,0 +1,144 @@
+{{define "main"}}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div
+        class="col-lg-9 d-flex flex-column justify-content-center text-center"
+      >
+        <h1 data-aos="fade-up">Empowering Innovation Through Diversity</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">
+          Your Trusted Partner in IT Staffing and Recruitment
+        </h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center">
+            <a
+              href="/about-us"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center"
+            >
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero -->
+
+<!-- ======= Values Section ======= -->
+<section class="values">
+  {{with .Params.services}}
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <p>Services</p>
+    </header>
+
+    <div class="row">
+      {{range .items}}
+      <div class="col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="box text-start">
+          <img src="/assets/img/{{.icon}}" class="img-fluid" alt="" />
+          <h3>{{.title}}</h3>
+
+          <ul>
+            {{range .content}}
+            <li><i class="bi bi-check-circle"></i> {{.}}</li>
+            {{end}}
+          </ul>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+  {{end}}
+</section>
+<!-- End Values Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h2>Testimonials</h2>
+      <p>What they are saying about us</p>
+    </header>
+
+    <div
+      class="testimonials-slider swiper"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              Working with Alybyte Inc. has been a game-changer for our
+              projects. Their diverse talent pool brought fresh insights and
+              expertise."
+            </p>
+          </div>
+        </div>
+        <!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              The team at Alybyte Inc. truly understands our needs. Their
+              dedication and quick response have made them our go-to staffing
+              partner.
+            </p>
+          </div>
+        </div>
+        <!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              The team at Alybyte Inc. truly understands our needs. Their
+              dedication and quick response have made them our go-to staffing
+              partner.
+            </p>
+          </div>
+        </div>
+        <!-- End testimonial item -->
+        <!-- End testimonial item -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<!-- End Testimonials Section -->
+<section class="cta pb-5">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <h4 class="mb-4">Join with us for more Details</h4>
+          <p>
+            <a href="/services" class="border-btn">Get Start</a
+            ><a href="tel:+1 5199720754" class="border-btn"
+              >Tell: +1 519-972-0754</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}

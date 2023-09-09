@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{partial "head" .}}
+
+  <body>
+    <!-- ======= Header ======= -->
+    {{partial "header"}}
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= main Section ======= -->
+      {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+      {{ end }}
+
+      <!-- End main -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {{ partial "footer"}}
+    <!-- End Footer -->
+  </body>
+</html>
